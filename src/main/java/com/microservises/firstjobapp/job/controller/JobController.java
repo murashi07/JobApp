@@ -36,7 +36,7 @@ public class JobController {
     public ResponseEntity<Job> getJobById(@PathVariable Long id){
         Job job= jobService.getJobById(id);
         if(job != null)
-            return new ResponseEntity<>(job, HttpStatus.CREATED);
+            return new ResponseEntity<>(job, HttpStatus.OK);
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
