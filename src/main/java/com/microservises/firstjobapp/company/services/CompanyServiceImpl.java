@@ -2,7 +2,6 @@ package com.microservises.firstjobapp.company.services;
 
 import com.microservises.firstjobapp.company.model.Company;
 import com.microservises.firstjobapp.company.repository.CompanyRepository;
-import com.microservises.firstjobapp.job.model.Job;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +9,7 @@ import java.util.Optional;
 
 @Service
 public class CompanyServiceImpl implements CompanyService{
-    private CompanyRepository companyRepository;
+    private final CompanyRepository companyRepository;
 
     public CompanyServiceImpl(CompanyRepository companyRepository) {
         this.companyRepository = companyRepository;

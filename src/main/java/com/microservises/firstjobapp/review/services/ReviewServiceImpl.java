@@ -2,20 +2,18 @@ package com.microservises.firstjobapp.review.services;
 
 import com.microservises.firstjobapp.company.model.Company;
 import com.microservises.firstjobapp.company.services.CompanyService;
-import com.microservises.firstjobapp.job.model.Job;
 import com.microservises.firstjobapp.review.model.Review;
 import com.microservises.firstjobapp.review.repository.ReviewRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ReviewServiceImpl implements ReviewService{
 
-    private ReviewRepository reviewRepository;
+    private final ReviewRepository reviewRepository;
 
-    private CompanyService companyService;
+    private final CompanyService companyService;
 
     public ReviewServiceImpl(ReviewRepository reviewRepository, CompanyService companyService) {
         this.reviewRepository = reviewRepository;

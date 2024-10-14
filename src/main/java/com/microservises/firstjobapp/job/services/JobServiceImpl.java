@@ -4,15 +4,13 @@ import com.microservises.firstjobapp.job.model.Job;
 import com.microservises.firstjobapp.job.repository.JobRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class JobServiceImpl implements JobService {
     //private List<Job> jobs = new ArrayList<>();
-    JobRepository jobRepository;
+    private final JobRepository jobRepository;
     public JobServiceImpl(JobRepository jobRepository) {
         this.jobRepository = jobRepository;
     }

@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/companies/{companyId}")
 public class ReviewController {
-    private ReviewService reviewService;
+    private final ReviewService reviewService;
 
     public ReviewController(ReviewService reviewService) {
         this.reviewService = reviewService;
@@ -32,7 +32,6 @@ public class ReviewController {
         }
         return new ResponseEntity<>("Review not  created successfully", HttpStatus.NOT_FOUND);
     }
-
         @GetMapping("/reviews/{reviewId}")
     public ResponseEntity<Review> getReviewById(@PathVariable Long reviewId,
                                                 @PathVariable Long companyId){
